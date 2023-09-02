@@ -1,2 +1,2 @@
 # nestjs-fastify-graphql
-This is a seed that enables the scaffolding of new microservices to kickstart your development journey.
+This seed enables the scaffolding of new microservices, serving as a starting point for your development journey. It may undergo changes and updates in the future.

@@ -6,17 +6,22 @@ import { PubSub } from 'graphql-subscriptions';
 import { GRAPHQL_PUBSUB } from '../constants/graphql';
 import { UserModule } from './user.module';
 
+const playground =
+  process.env.NODE_ENV === 'local'
+    ? {
+        title: 'SEED',
+        version: '1',
+        endpoint: '/graphql',
+        subscriptionEndpoint: '/subscriptions',
+      }
+    : {};
+
 @Module({
   imports: [
     UserModule,
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      playground: process.env.NODE_ENV === 'local' && {
-        title: 'Web-Api-Next',
-        version: '1',
-        endpoint: '/graphql',
-        subscriptionEndpoint: '/subscriptions',
-      },
+      playground,
       autoSchemaFile: true,
       subscriptions: {
         'graphql-ws': {

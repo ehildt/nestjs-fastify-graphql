@@ -1,7 +1,7 @@
 version: '3'
 services:
-  web-api-next:
-    container_name: web-api-next
+  seed:
+    container_name: seed
     build:
       context: ./
       dockerfile: Dockerfile
@@ -14,4 +14,4 @@ services:
 
 networks:
   default:
-    name: WEB_API_NEXT_NETWORK
+    name: SEED_NETWORK
