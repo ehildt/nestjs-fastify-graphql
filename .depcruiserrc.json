@@ -1,0 +1,8 @@
+{
+  "noDuplicateDepTypes": [
+    "src/web-api-next/mocks/agenda/db.mock.ts"
+  ],
+  "noOrphans": [],
+  "notToDevDep": [],
+  "notToUnresolvable": []
+}

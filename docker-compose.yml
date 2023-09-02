@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web-api-next:
+    container_name: web-api-next
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    env_file:
+      - env/defaults.env
+    ports:
+      - '3001:3001'
+
+networks:
+  default:
+    name: WEB_API_NEXT_NETWORK

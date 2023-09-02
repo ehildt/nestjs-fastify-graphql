@@ -1,0 +1,20 @@
+{
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "moduleNameMapper": {
+    ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "identity-obj-proxy",
+    "@/(.*)": "<rootDir>/src/$1"
+  },
+  "rootDir": "../",
+  "setupFilesAfterEnv": [
+    "jest-extended/all"
+  ],
+  "testEnvironment": "node",
+  "testRegex": ".*\\e2e-spec\\.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  }
+}

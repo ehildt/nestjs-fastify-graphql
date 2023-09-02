@@ -1,0 +1,6 @@
+#!/bin/sh
+#. "$(dirname "$0")/prepare.sh"
+#
+#check_docker_service
+#check_licenses
+#check_lint_staged
