@@ -12,7 +12,7 @@ void (async () => {
   const logger = app.get(ConsoleLogger);
   const configFactory = app.get(ConfigFactoryService);
   app.useGlobalPipes(VALIDATION_PIPE);
-  // TODO: use a mongo store for persist the session
+  // TODO: use a mongo/redis store to persist the session
   // TODO: save the session id in a cookie
   // await app.register(fastifyCookie, { secret: configFactory.app.COOKIE_SECRET });
   // await app.register(fastifySession, { secret: configFactory.app.SESSION_SECRET });
