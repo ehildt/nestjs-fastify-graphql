@@ -1,0 +1,10 @@
+
+app:
+  PORT: 3001
+  NODE_ENV: local
+  SESSION_SECRET: 'secret passwords need to be super secure' 
+  COOKIE_SECRET: 'cookies are yummy, they are never safe'
+
+network:
+  USER_BASE_URL: 'SOME_URL'
+  AUTH_BASE_URL: 'SOME_URL'
