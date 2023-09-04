@@ -1,6 +1,6 @@
 import Joi from 'joi';
 
-import { CONFIG_YML } from '../yml-loader/config.yml.loader';
+import { CONFIG_YML } from '../yml-reader/config.yml.reader';
 
 export const networkSchema = {
   USER_BASE_URL: CONFIG_YML?.network.USER_BASE_URL
