@@ -51,24 +51,6 @@
     "explorerExclude.backup": {},
     "better-comments.tags": [
         {
-            "tag": "!",
-            "color": "#BB84D0",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": "FIX",
-            "color": "#CC2DA0",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
             "tag": "@",
             "color": "#FC2DAA",
             "strikethrough": false,
@@ -96,16 +78,7 @@
             "italic": false
         },
         {
-            "tag": "todo",
-            "color": "#FF8C00",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": "*",
+            "tag": "!",
             "color": "#98C379",
             "strikethrough": false,
             "underline": false,

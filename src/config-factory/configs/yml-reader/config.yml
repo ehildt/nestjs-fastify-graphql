@@ -2,8 +2,8 @@
 app:
   PORT: 3001
   NODE_ENV: local
-  SESSION_SECRET: 'secret passwords need to be super secure' 
-  SESSION_SALT: 'cookies are yummy, they are never safe'
+  SESSION_SECRET: 'cookiesareyumm12cookiesareyumm12' 
+  SESSION_SALT: 'cookiesareyumm12'
 
 network:
   USER_BASE_URL: 'SOME_URL'

@@ -2,6 +2,7 @@ import { fastifySecureSession } from '@fastify/secure-session';
 import { ConsoleLogger, ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify';
+import { randomBytes } from 'crypto';
 
 import { ConfigFactoryService } from './config-factory/services/config-factory.service';
 import { MainModule } from './main.module';
@@ -12,21 +13,21 @@ void (async () => {
   const configFactory = app.get(ConfigFactoryService);
   app.useGlobalPipes(VALIDATION_PIPE);
 
-  // TODO: use redis/mongo store
-  // otherwise this app won't scale
+  // @REFINE - put the attributes into the config factory
   await app.register(fastifySecureSession, {
-    key: ['one', 'two'], // TODO: put in config factory
-    secret: configFactory.app.SESSION_SECRET, // TODO: put in config factory
-    salt: configFactory.app.SESSION_SALT, // TODO: put in config factory
-
-    // TODO: more options
+    sessionName: 'seed_session',
+    cookieName: 'seed_cookie',
+    prefix: 'seed',
+    key: [randomBytes(32), randomBytes(32)],
+    secret: configFactory.app.SESSION_SECRET,
+    salt: configFactory.app.SESSION_SALT,
     cookie: {
-      maxAge: 60 * 60,
-      secure: false, // TODO: for http, true for https
+      maxAge: 1000 * 60 * 60 * 24 * 7, // one week
+      secure: false, // false for http, true for https
     },
   });
 
-  // TODO: swagger open-api
+  // !ENHANCEMENT - swagger open-api
 
   await app.listen(configFactory.app.PORT, '0.0.0.0');
   logger.log({ APP: configFactory.app, NETWORK: configFactory.network }, 'CONFIG');
