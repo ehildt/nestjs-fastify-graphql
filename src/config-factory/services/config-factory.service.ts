@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
-import { AppConfig } from '../app/model';
-import { NetworkConfig } from '../network/model';
+import { AppConfig } from '../configs/app/model';
+import { NetworkConfig } from '../configs/network/model';
 
 @Injectable()
 export class ConfigFactoryService {
@@ -12,7 +12,7 @@ export class ConfigFactoryService {
     return Object.freeze({
       PORT: this.configService.get<number>('AppConfig.PORT'),
       NODE_ENV: this.configService.get<string>('AppConfig.NODE_ENV'),
-      COOKIE_SECRET: this.configService.get<string>('AppConfig.COOKIE_SECRET'),
+      SESSION_SALT: this.configService.get<string>('AppConfig.SESSION_SALT'),
       SESSION_SECRET: this.configService.get<string>('AppConfig.SESSION_SECRET'),
     } satisfies AppConfig);
   }

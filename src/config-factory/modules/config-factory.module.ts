@@ -1,8 +1,8 @@
 import { Global, Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 
-import { AppConfigRegistry } from '../app/registry';
-import { NetworkRegistry } from '../network/registry';
+import { AppConfigRegistry } from '../configs/app/registry';
+import { NetworkRegistry } from '../configs/network/registry';
 import { ConfigFactoryService } from '../services/config-factory.service';
 import { schema } from '../validations/schema';
 

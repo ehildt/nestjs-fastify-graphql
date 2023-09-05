@@ -11,7 +11,7 @@ export class AppConfigAdapter {
     return process.env.SESSION_SECRET;
   }
 
-  get COOKIE_SECRET(): string {
-    return process.env.COOKIE_SECRET;
+  get SESSION_SALT(): string {
+    return process.env.SESSION_SALT;
   }
 }
