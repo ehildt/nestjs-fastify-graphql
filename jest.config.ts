@@ -2,7 +2,7 @@
 
 import type { Config } from '@jest/types';
 
-const config: Config.InitialOptions = {
+module.exports = {
   moduleFileExtensions: ['js', 'json', 'ts'],
   preset: 'ts-jest',
   roots: ['<rootDir>/src', '<rootDir>/test'],
@@ -31,6 +31,4 @@ const config: Config.InitialOptions = {
   coverageDirectory: '<rootDir>/src/coverage',
   setupFilesAfterEnv: ['jest-extended/all'],
   moduleDirectories: ['node_modules'],
-};
-
-module.exports = { ...config };
+} satisfies Config.InitialOptions;

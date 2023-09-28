@@ -7,7 +7,7 @@
     "watchAssets": true,
     "assets": [
       {
-        "include": "config-factory/configs/yml-reader/config.yml"
+        "include": "config-factory/configs/yml-loader/config.yml"
       }
     ]
   }

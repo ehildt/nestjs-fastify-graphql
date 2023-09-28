@@ -1,0 +1,14 @@
+
+app:
+  PORT: 3001
+  NODE_ENV: local
+  SESSION_SECRET: 'b867279142baad15164ad90694aa3f7e67c98f7f46613a15d2737367f44f610c'  #32 bytes string::hex
+  SESSION_SALT: 'e9742077ea0f6d985a3a208f2093b7da'                                    #16 bytes string::hex
+
+network:
+  USER_BASE_URL: 'http://some-example-url.xyz'
+  AUTH_BASE_URL: 'http://some-example-url.xyz'
+
+session:
+  SESSION_SECRET: 'b867279142baad15164ad90694aa3f7e67c98f7f46613a15d2737367f44f610c'
+  SESSION_SALT: 'e9742077ea0f6d985a3a208f2093b7da'
